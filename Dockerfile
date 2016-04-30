@@ -29,8 +29,8 @@ RUN sed -e 's/;daemonize = yes/daemonize = no/' -i /etc/php/7.0/fpm/php-fpm.conf
     && sed -e 's/;listen\.owner/listen.owner/' -i /etc/php/7.0/fpm/pool.d/www.conf \
     && sed -e 's/;listen\.group/listen.group/' -i /etc/php/7.0/fpm/pool.d/www.conf \
     && echo "opcache.enable=1" >> /etc/php/7.0/mods-available/opcache.ini \
-    && echo "opcache.enable_cli=1" >> /etc/php/7.0/mods-available/opcache.ini
-	&& echo "date.timezone = UTC" >> /etc/php/7.0/cli/php.ini
+    && echo "opcache.enable_cli=1" >> /etc/php/7.0/mods-available/opcache.ini \
+	&& echo "date.timezone = UTC" >> /etc/php/7.0/cli/php.ini \
 	&& echo "date.timezone = UTC" >> /etc/php/7.0/fpm/php.ini
 
 RUN sed -i  -e "s/\(post_max_size =\).*/\1 50M/g" /etc/php/7.0/cli/php.ini
