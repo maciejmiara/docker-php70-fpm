@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	  php7.0-mbstring \
 	  php7.0-zip \
 	  php7.0-xml \
+	  php-memcached \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure PHP-FPM
