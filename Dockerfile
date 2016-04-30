@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:xenial
 
 MAINTAINER Maciej Miara <mkowalski8@gmail.com>
 
@@ -41,4 +41,4 @@ RUN sed -i  -e "s/\(max_execution_time =\).*/\1 300/g" /etc/php/7.0/fpm/php.ini
 
 EXPOSE 9000
 
-CMD ["systemctl start php7.0-fpm"]
+CMD ["service start php7.0-fpm"]
