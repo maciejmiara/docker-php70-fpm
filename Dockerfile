@@ -42,4 +42,4 @@ RUN sed -i  -e "s/\(max_execution_time =\).*/\1 300/g" /etc/php/7.0/fpm/php.ini
 
 EXPOSE 9000
 
-CMD ["service start php7.0-fpm"]
+CMD ["/usr/sbin/php-fpm7.0"]
