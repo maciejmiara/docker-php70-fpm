@@ -44,6 +44,8 @@ RUN sed -i  -e "s/\(post_max_size =\).*/\1 50M/g" /etc/php/7.0/fpm/php.ini
 RUN sed -i  -e "s/\(upload_max_filesize =\).*/\1 50M/g" /etc/php/7.0/fpm/php.ini
 RUN sed -i  -e "s/\(max_execution_time =\).*/\1 300/g" /etc/php/7.0/fpm/php.ini
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 EXPOSE 9000
 
 CMD ["/usr/sbin/php-fpm7.0"]
