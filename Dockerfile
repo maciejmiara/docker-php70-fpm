@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	  vim \
       curl \
       sqlite3 \
+      git \
       php7.0 \
 	  php7.0-fpm \
       php7.0-cli \
